@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Pull from GitHub') {
             steps {
-                git 'https://github.com/abdelkhalek-saadani/tp2-devops.git'
+                git branch: 'main', credentialsId: 'd77afd18-4911-457d-8d63-389f547e2225', url: 'https://github.com/abdelkhalek-saadani/tp2-devops.git'
             }
         }
         stage('Build Docker Image') {

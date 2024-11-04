@@ -6,6 +6,11 @@ pipeline {
                 git branch: 'main', credentialsId: 'd77afd18-4911-457d-8d63-389f547e2225', url: 'https://github.com/abdelkhalek-saadani/tp2-devops.git'
             }
         }
+        stage('Build Project') {
+            steps {
+                sh 'mvn clean package'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 script {

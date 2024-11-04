@@ -1,14 +1,16 @@
-version: "3"
 services:
   mongodb-container-one:
     image: mongo:latest
     container_name: "mongodb-container-one"
     ports:
       - 28000:27017
+    volumes:
+      - /home/gala/Desktop/RT5 Materials/devOps/TP/TP2/Springboot and MongoDB with Docker, Docker Compose/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
+
   springboot-with-mongodb-container-one:
-    image: ranjan715/springboot-with-mongodb:v11
+    image: spring-and-docker:v3
     container_name: springboot-with-mongodb-container-one
     ports:
       - 8090:8081
-    links:
+    depends_on:
       - mongodb-container-one

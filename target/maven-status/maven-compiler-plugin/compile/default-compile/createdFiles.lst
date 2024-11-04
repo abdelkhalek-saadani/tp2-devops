@@ -1,7 +1,0 @@
-com/mycompany/obitemservice/model/ItemModel.class
-com/mycompany/obitemservice/repository/ItemRepository.class
-com/mycompany/obitemservice/model/ItemCategoryModel.class
-com/mycompany/obitemservice/controller/ItemCategoryController.class
-com/mycompany/obitemservice/controller/ItemController.class
-com/mycompany/obitemservice/repository/ItemCategoryRepository.class
-com/mycompany/obitemservice/ObItemServiceApplication.class
